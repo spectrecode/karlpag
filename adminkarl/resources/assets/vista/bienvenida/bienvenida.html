@@ -1,0 +1,25 @@
+
+<div class="inner-panel">
+  <div class="column">
+    <header id="menuLeft" ng-controller="menuPrincipalCrtl">
+      <div class="inner-logo"><img src="./resources/assets/image/logo.png" alt=""/></div>
+      <div class="inner-user"><img src="./resources/assets/image/usuario/{{photoUser}}" alt=""/></div>
+      <div class="detail-user">
+        <h2>{{nombreUser}}</h2>
+        <p>{{perfilUser}} </p>
+      </div>
+      <nav><a href="#/vista/principal" class="active">Inicio</a><a href="#/usuario">Usuarios</a><a href="#/noticia">Noticias</a><a href="#/bibliografia">Biografía</a></nav>
+    </header>
+  </div>
+  <div class="column">
+    <div ng-controller="miusuarioCrtl" class="cabecera">
+      <div class="column">
+        <p><i class="icon-calendar"></i>Lunes 14 de Noviembre del 2017</p>
+      </div>
+      <div class="column"><a href="javascript:void(0)" ng-click="editarmiUser()">Editar usuario</a><a href="#" ng-click="salirAdmin()">Salir</a></div>
+    </div>
+    <div class="inner-contenido">
+      <p>Bienvenido al administrador de contenidos de Karl Maslo.</p>
+    </div>
+  </div>
+</div>

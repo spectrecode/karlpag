@@ -1,0 +1,113 @@
+
+<div class="inner-panel">
+  <div class="column">
+    <header id="menuLeft" ng-controller="menuPrincipalCrtl">
+      <div class="inner-logo"><img src="./resources/assets/image/logo.png" alt=""/></div>
+      <div class="inner-user"><img src="./resources/assets/image/usuario/{{photoUser}}" alt=""/></div>
+      <div class="detail-user">
+        <h2>{{nombreUser}}</h2>
+        <p>{{perfilUser}} </p>
+      </div>
+      <nav><a href="#/vista/principal">Inicio</a><a href="#/usuario" class="active">Usuarios</a><a href="#/noticia">Noticias</a><a href="#/bibliografia">Biografía</a></nav>
+    </header>
+  </div>
+  <div class="column">
+    <div ng-controller="miusuarioCrtl" class="cabecera">
+      <div class="column">
+        <p><i class="icon-calendar"></i>Lunes 14 de Noviembre del 2017</p>
+      </div>
+      <div class="column"><a href="javascript:void(0)" ng-click="editarmiUser()">Editar usuario</a><a href="#" ng-click="salirAdmin()">Salir</a></div>
+    </div>
+    <div ng-controller="editarUsuarioCrtl" class="inner-contenido">
+      <div class="inner-nave">
+        <ul>
+          <li><a href="{{rutaBrench}}">Usuario</a><span class="dividir">>></span></li>
+          <li><a href="javascript:void(0)" class="active">{{nom_accion}}</a></li>
+        </ul>
+      </div>
+      <div class="inner-botones">
+        <div class="column"></div>
+        <div class="column"><a href="javascript:void(0)" ng-click="procesarForm(form)" class="btnaddArt"><i class="icon-plus"></i>Guardar cambios</a></div>
+      </div>
+      <div class="inner-form form-interno">
+        <form name="formuser" id="formuser">
+          <fieldset class="row inner-alert">
+            <div class="alert exito">
+              <p></p>
+            </div>
+          </fieldset>
+          <fieldset class="row">
+            <label>Tipo de Usuario</label>
+            <div class="inner-select">
+              <div id="tipouser" class="cajaselect"><span class="seleccionado">Tipo de Usuario</span>
+                <ul class="listaselect">
+                  <li><a href="javascript:void(0)" data-id="0">Tipo de Usuario</a></li>
+                  <li><a href="javascript:void(0)" data-id="1">Editor</a></li>
+                  <li><a href="javascript:void(0)" data-id="2">Administrador</a></li>
+                </ul><span class="trianguloinf"></span>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="row">
+            <label>Nombre</label>
+            <input type="text" name="nombre" id="nombre" ng-model="form.nombre" placeholder="Ingrese el Nombre"/>
+          </fieldset>
+          <fieldset class="row">
+            <label>Apellido Paterno</label>
+            <input type="text" name="a_paterno" id="a_paterno" ng-model="form.a_paterno" placeholder="Ingrese el Apellido Paterno"/>
+          </fieldset>
+          <fieldset class="row">
+            <label>Apellido Materno</label>
+            <input type="text" name="a_materno" id="a_materno" ng-model="form.a_materno" placeholder="Ingrese el Apellido Materno"/>
+          </fieldset>
+          <fieldset class="row">
+            <label>¿Masculino?</label>
+            <input type="checkbox" ng-model="checkboxSexo.value1"/>
+          </fieldset>
+          <fieldset class="row">
+            <label>Correo Electrónico</label>
+            <input type="text" name="email" id="email" ng-model="form.email" placeholder="Ingrese el Correo Electrónico"/>
+          </fieldset>
+          <fieldset class="row">
+            <label>Celular</label>
+            <input type="text" name="movil" id="movil" ng-model="form.movil" placeholder="Ingrese el Celular"/>
+          </fieldset>
+          <fieldset class="row">
+            <label>Teléfono</label>
+            <input type="text" name="telefono" id="telefono" ng-model="form.telefono" placeholder="Ingrese el Teléfono"/>
+          </fieldset>
+          <fieldset class="row">
+            <label>Suba su Foto</label>
+            <figure><img src="{{rutaImg}}{{form.act_img_portada}}"/></figure>
+            <input type="file" name="file_portada" id="file_portada" ng-model="form.file_portada"/>
+          </fieldset>
+          <fieldset class="row">
+            <label>¿Acceso?</label>
+            <input type="checkbox" ng-model="checkboxModel.value1"/>
+          </fieldset>
+          <fieldset class="row">
+            <label>Usuario</label>
+            <input type="text" name="usuario" id="usuario" ng-model="form.usuario" placeholder="Ingrese el Usuario"/>
+          </fieldset>
+          <fieldset class="row">
+            <label>Contraseña</label>
+            <input type="password" name="password" id="password" ng-model="form.password" placeholder="Ingrese el Contraseña"/>
+          </fieldset>
+          <fieldset class="row">
+            <label>Repetir Contraseña</label>
+            <input type="password" name="password2" id="password2" ng-model="form.password2" placeholder="Ingrese el Nuevamente Contraseña"/>
+          </fieldset>
+          <fieldset class="row inner-alert">
+            <div class="alert exito">
+              <p></p>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="inner-botones">
+        <div class="column"></div>
+        <div class="column"><a href="javascript:void(0)" ng-click="procesarForm(form)" class="btnaddArt"><i class="icon-plus"></i>Guardar cambios</a></div>
+      </div>
+    </div>
+  </div>
+</div>

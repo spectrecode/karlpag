@@ -1,0 +1,81 @@
+
+<div class="inner-panel">
+  <div class="column">
+    <header id="menuLeft" ng-controller="menuPrincipalCrtl">
+      <div class="inner-logo"><img src="./resources/assets/image/logo.png" alt=""/></div>
+      <div class="inner-user"><img src="./resources/assets/image/usuario/{{photoUser}}" alt=""/></div>
+      <div class="detail-user">
+        <h2>{{nombreUser}}</h2>
+        <p>{{perfilUser}} </p>
+      </div>
+      <nav><a href="#/vista/principal">Inicio</a><a href="#/usuario" class="active">Usuarios</a><a href="#/noticia">Noticias</a><a href="#/bibliografia">Biografía</a></nav>
+    </header>
+  </div>
+  <div class="column">
+    <div ng-controller="miusuarioCrtl" class="cabecera">
+      <div class="column">
+        <p><i class="icon-calendar"></i>Lunes 14 de Noviembre del 2017</p>
+      </div>
+      <div class="column"><a href="javascript:void(0)" ng-click="editarmiUser()">Editar usuario</a><a href="#" ng-click="salirAdmin()">Salir</a></div>
+    </div>
+    <div ng-controller="listarUsuarioCrtl" class="inner-contenido">
+      <div class="inner-nave">
+        <ul>
+          <li><a href="javascript:void(0)">Usuario</a><span class="dividir">>></span></li>
+          <li><a href="javascript:void(0)" class="active">Listado de Usuarios</a></li>
+        </ul>
+      </div>
+      <div class="inner-botones">
+        <div class="column">
+          <input type="text" ng-model="form.buscarArt" placeholder="Buscar nombre..."/><a href="javascript:void(0)" ng-click="buscar(form)"><i class="icon-search"></i>Buscar</a>
+        </div>
+        <div class="column"><a href="javascript:void(0)" ng-click="agregar()" class="btnaddArt"><i class="icon-plus"></i>Añadir Usuario</a></div>
+      </div>
+      <div class="inner-listado">
+        <table>
+          <thead>
+            <tr>
+              <th class="center">Nº</th>
+              <th class="center">Nombre</th>
+              <th class="center">Apellido</th>
+              <th class="center">Perfil</th>
+              <th class="center">Usuario</th>
+              <th class="center">Acceso ?</th>
+              <th class="center">F. Creación</th>
+              <th class="center">Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="arrinfo in datos">
+              <td class="center">
+                <p>{{arrinfo.items}}</p>
+              </td>
+              <td class="ancho200">
+                <p>{{arrinfo.nombre}}</p>
+              </td>
+              <td class="ancho200">
+                <p>{{arrinfo.app_paterno}}</p>
+              </td>
+              <td class="center ancho160">
+                <p>{{arrinfo.name_tipouser}}</p>
+              </td>
+              <td class="center">
+                <p>{{arrinfo.user}}</p>
+              </td>
+              <td class="center"><a href="javascript:void(0)" ng-click="cambiarEstado(arrinfo.estado,arrinfo.id)"><i class="{{arrinfo.classestado}}"></i></a></td>
+              <td class="center">
+                <p>{{arrinfo.f_creacion}}</p>
+              </td>
+              <td class="center accion"><a href="javascript:void(0)" ng-click="editar(arrinfo.id)"><i class="icon-pencil"></i>Editar</a><a href="javascript:void(0)" ng-click="eliminar(arrinfo.id)"><i class="icon-bin"></i>Eliminar</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="inner-paginado">
+        <ul>
+          <li ng-repeat="n in range"><a href="javascript:void(0)" ng-click="paginar(n + 1)">{{n + 1}}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

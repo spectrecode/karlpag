@@ -1,0 +1,870 @@
+@font-face
+	font-family 'Lato'
+	font-style normal
+	font-weight 500
+	src url(../fonts/Lato-Medium.ttf) format("TrueType")
+@font-face
+	font-family 'Lato'
+	font-style normal
+	font-weight 400
+	src url(../fonts/Lato-Regular.ttf) format("TrueType")
+@font-face
+	font-family 'Lato'
+	font-style normal
+	font-weight 200
+	src url(../fonts/Lato-Light.ttf) format("TrueType")
+@font-face
+	font-family 'Lato'
+	font-style italic
+	font-weight 200
+	src url(../fonts/Lato-LightItalic.ttf) format("TrueType")
+@font-face
+	font-family 'LubalinGraphStd'
+	font-style normal
+	font-weight 300
+	src url(../fonts/LubalinGraphStd-Book.OTF) format("OpenType")
+body
+	background-image url("../img/fondo-home.jpg")
+	background-position center center
+	background-repeat no-repeat
+	background-size cover
+	background-attachment fixed
+header
+	img
+		width 120px
+		margin-right 50px
+	.inline-left
+		float left
+	.inline-right
+		float right
+	nav
+		margin-top 50px
+		&>ul
+			list-style none
+			&>li
+				display inline-block
+				margin-right 70px
+				position relative
+				&:hover
+					ul
+						display block
+				&>a
+					font-family 'Lato'
+					font-style normal
+					font-weight 500
+					font-size 15px
+					color #8A8A89
+					&.active
+						text-decoration none
+						border-bottom 2px solid #006aa9
+						padding-bottom 5px
+					&:hover
+						color white
+						text-decoration none
+						border-bottom 2px solid #006aa9
+						padding-bottom 5px
+					i
+						color #006AA9
+				&>ul
+					display none
+					position absolute
+					bottom -40px
+					padding-left 0px
+					text-align center
+					width 100%
+					&>li
+						display inline-block
+						&>a
+							font-family 'Lato'
+							font-style normal
+							font-weight 500
+							font-size 15px
+							color white
+							width 200px
+							height 30px
+							padding 5px 30px
+							&:hover
+								text-decoration none
+								color white
+	#menu-co
+		color white
+		position absolute
+		top 25px
+		right 20px
+		cursor pointer
+@media (min-width: 970px) and (max-width: 1170px)
+	header
+		img
+			width 100px
+			margin-right 20px
+		nav
+			&>ul
+				padding-left 0px
+				&>li
+					margin-right 40px
+@media (min-width: 767px) and (max-width: 970px)
+	header
+		img
+			width 100px
+			margin-right 20px
+		nav
+			&>ul
+				padding-left 0px
+				&>li
+					margin-right 30px
+@media (max-width: 767px)
+	header
+		background-color #1B222A
+		img
+			width 70px
+		nav
+			position absolute
+			top 70px
+			left 0
+			background-color white
+			width 100%
+			margin-top 0px
+			display none
+			z-index 5
+			&>ul
+				padding-left 0px
+				margin-bottom 0px
+				&>li
+					display block
+					text-align center
+					margin-right 0px
+					border-bottom 1px solid #a7a7a7
+					border-top 0
+					margin-left 0px
+					&>a
+						padding-top 10px
+						padding-bottom 10px
+						display block
+						width 100%
+						&:hover
+							color black
+							border-bottom 0
+							padding-bottom 10px
+					&>ul
+						&>li
+							width 100%
+							&>a
+								width 100%
+								background-color #282C32
+								display block
+#home
+	padding-top 80px
+	padding-bottom 60px
+	img
+		width 100%
+		border 2px solid rgba(160,160,160,0.2)
+		padding 10px
+	h1
+		font-family 'LubalinGraphStd'
+		font-style normal
+		font-weight 300
+		font-size 50px
+		color #A0A09F
+		line-height 46px
+		margin-top 0px
+		b
+			font-weight 300
+			color #006AA9
+	p
+		font-family 'Lato'
+		font-style normal
+		font-weight 200
+		font-size 14px
+		color white
+		margin-top 20px
+		margin-bottom 20px
+	a
+		font-family 'Lato'
+		font-style normal
+		font-weight 200
+		font-size 15px
+		color #65696D
+		border 1px solid #65696D
+		padding 10px 30px
+		display inline-block
+		margin-right 30px
+		text-decoration none
+		&:hover
+			color white
+			background-color #65696D
+#contenido
+	.fondo-lista
+		background-color rgba(255,255,255,0.1)
+		padding 5px 25px
+		a.ver-mas
+			font-family 'Lato'
+			font-style italic
+			font-weight 200
+			font-size 20px
+			color #A0A09F
+			display block
+			text-align center
+			padding-top 18px
+			padding-bottom 18px
+			&:hover
+				text-decoration none
+			i
+				font-size 35px
+				bottom -5px
+				position relative
+	.noticia-mini
+		background-image url("../img/portada-noticia.jpg")
+		background-position center center
+		background-repeat no-repeat
+		background-size cover
+		position relative
+		padding 40px 40px 32px 40px
+		margin-bottom 5px
+		margin-top 5px
+		display inline-block
+		&.par
+			background-color white
+			background-image none
+			h2
+				color black
+			p
+				color black
+			.categoria
+				color #B5B5B5
+				a
+					color #B5B5B5
+					border 1px solid #B5B5B5
+			a.leer-mas
+				color black
+				border 1px solid black
+				&:hover
+					color white
+					background-color black
+			span.fecha
+				color black
+		.categoria
+			position absolute
+			top 20px
+			left 20px
+			font-family 'Lato'
+			font-style normal
+			font-weight 400
+			font-size 16px
+			color white
+			a
+				color white
+				border 1px solid white
+				display table
+				width 40px
+				height 40px
+				text-align center
+				position relative
+				text-decoration none
+				span
+					position absolute
+					top 7px
+					left 50px
+					width 120px
+					text-align left
+				i
+					display table-cell
+					vertical-align middle
+		h2
+			font-family 'LubalinGraphStd'
+			font-style normal
+			font-weight 300
+			font-size 27px
+			color white
+			width 400px
+			margin-right auto
+			margin-left auto
+			height 85px
+		p
+			font-family 'Lato'
+			font-style normal
+			font-weight 200
+			font-size 13px
+			color white
+			width 500px
+			margin-right auto
+			margin-left auto
+			height 60px
+			margin-bottom 30px
+		span.fecha
+			font-family 'Lato'
+			font-style normal
+			font-weight 200
+			font-size 12px
+			color white
+		a.leer-mas
+			font-family 'Myriad Pro'
+			font-style italic
+			font-weight 400
+			font-size 12px
+			color white
+			border 1px solid white
+			padding 10px 40px
+			&:hover
+				text-decoration none
+				background-color white
+				color black
+	aside
+		border 2px solid rgba(160,160,160,0.21)
+		padding 30px 15px
+		display inline-block
+		h3
+			font-family 'LubalinGraphStd'
+			font-style normal
+			font-weight 300
+			font-size 25px
+			color #A0A09F
+			line-height 22px
+			margin-top 0px
+			margin-left -15px
+			margin-right -15px
+			b
+				font-weight 300
+				color #006AA9
+		.noticia-popular
+			background-color white
+			margin-top 15px
+			margin-bottom 15px
+			text-align center
+			padding-bottom 20px
+			img
+				width 100%
+			h2
+				font-family 'LubalinGraphStd'
+				font-style normal
+				font-weight 300
+				font-size 16px
+				color #4C4C4C
+				margin-bottom 0px
+				padding-left 20px
+				padding-right 20px
+				height 55px
+			a
+				font-family 'Lato'
+				font-style normal
+				font-weight 200
+				font-size 14px
+				color #65696D
+		a.ver-mas
+			font-family 'Lato'
+			font-style italic
+			font-weight 200
+			font-size 20px
+			color #A0A09F
+			display block
+			text-align center
+			padding-top 15px
+			padding-bottom 18px
+			&:hover
+				text-decoration none
+			i
+				font-size 35px
+				bottom -5px
+				position relative
+@media (min-width: 767px) and (max-width: 970px)
+	#home
+		a
+			padding 10px 15px
+	#contenido
+		.noticia-mini
+			h2
+				width 100%
+			p
+				width 100%
+@media (max-width: 767px)
+	#home
+		h1
+			margin-top 20px
+			br
+				display none
+		a
+			margin-right: 2px
+			padding-left: 10px
+			padding-right: 10px
+	#contenido
+		padding-left 0px
+		padding-right 0px
+		.noticia-mini
+			padding-left 10px 
+			padding-right 10px
+			h2
+				width 100%
+				font-size 25px
+				margin-top 30px
+			p
+				width 100%
+				height 80px
+	aside
+		margin-left 0 !important
+		margin-right 0 !important
+		margin-top 20px
+footer
+	background-color #31312E
+	padding-top 40px
+	padding-bottom 20px
+	margin-top 20px
+	img
+		width 70%
+	.listado
+		&>ul
+			padding-left 0px
+			list-style none
+			&>li
+				display inline-block
+				width 19%
+				&>a
+					font-family 'Lato'
+					font-style normal
+					font-weight 500
+					font-size 14px
+					color #8A8A89
+				&>ul
+					padding-left 0px
+					list-style none
+					&>li
+						&>a
+							font-style normal
+							font-weight 500
+							font-size 14px
+							color #5D5D5B
+	p
+		font-family 'Lato'
+		font-style normal
+		font-weight 500
+		font-size 14px
+		color #5D5D5B
+		margin-top 10px
+		a
+			color #8A8A89
+			&:hover
+				text-decoration none
+				color #8A8A89
+@media (max-width: 767px)
+	footer
+		img
+			width 40%
+		.listado
+			&>ul
+				margin-top 30px
+				&>li
+					width 49%
+.rr-ss
+	position fixed
+	top 35%
+	right 5px
+	ul
+		list-style none
+		li
+			margin-bottom 5px
+			a
+				background-color #31312E
+				width 45px
+				height 45px
+				text-align center
+				display table
+				color white
+				&:hover
+					text-decoration none
+					color #31312E
+					background-color white
+				i
+					display table-cell
+					vertical-align middle
+					font-size 20px
+#noticia-body
+	background-color #E2E2E2
+	padding 120px 170px 50px
+	margin-top 50px
+	margin-left 40px 
+	margin-right 40px
+	position relative
+	.categoria
+		position absolute
+		top 30px
+		left 30px
+		font-family 'Lato'
+		font-style normal
+		font-weight 200
+		font-size 25px
+		color #8A8F94
+		a
+			color #8A8F94
+			border 2px solid rgba(138,143,148,0.9)
+			display table
+			width 60px
+			height 60px
+			text-align center
+			position relative
+			text-decoration none
+			span
+				position absolute
+				top 10px
+				right -130px
+			i
+				display table-cell
+				vertical-align middle
+	.volver
+		position absolute
+		top 30px
+		right 30px
+		font-family 'Lato'
+		font-style italic
+		font-weight 200
+		font-size 22px
+		color #8A8F94
+		text-decoration none
+	h1
+		font-family 'LubalinGraphStd'
+		font-style normal
+		font-weight 300
+		font-size 35px
+		color #4C4C4C
+		text-align center
+		margin-bottom 20px
+	p.subtitulo
+		font-family 'Lato'
+		font-style italic
+		font-weight 200
+		font-size 18px
+		color #808080
+		text-align center
+	img
+		width 100%
+		border-top 2px solid rgba(2,12,23,0.12)
+		border-bottom 2px solid rgba(2,12,23,0.12)
+		padding 10px 
+		margin-top 50px 
+		margin-bottom 50px
+	.body-noti
+		p
+			font-family 'Lato'
+			font-style normal
+			font-weight 200
+			font-size 15px
+			color #4C4C4C
+			text-align justify
+	ul
+		padding-left 0px
+		list-style none
+		li
+			font-family 'Lato'
+			font-style normal
+			font-weight 200
+			font-size 15px
+			color #4C4C4C
+			a
+				text-decoration none
+				color #4C4C93
+				font-weight 400
+	ol
+		padding-left 0px
+		list-style none
+		border 2px solid #C6C8CA
+		display inline-block
+		margin-top 40px
+		li
+			display inline-block
+			font-family 'Lato'
+			font-style normal
+			font-weight 200
+			font-size 17px
+			color #4C4C4C
+			padding 18px 20px
+			a
+				text-decoration none
+				color #4C4C93
+				font-weight 400
+				i
+					font-size 25px
+					color rgba(2,12,23,0.53)
+	span.fecha
+		font-family 'Lato'
+		font-style normal
+		font-weight 200
+		font-size 17px
+		color #4C4C4C
+		margin-top 40px
+		display block
+	h2
+		font-family 'LubalinGraphStd'
+		font-style normal
+		font-weight 300
+		font-size 27px
+		color #65696D
+		border-top 2px solid rgba(2,12,23,0.12)
+		padding-top 40px
+		margin-bottom 30px
+	#owl-demo
+		position relative
+	.flechas-noticia
+		position absolute
+		font-size 80px
+		color #7E8081
+		top 30%
+		z-index 1000
+		cursor pointer
+	#flecha-left
+		left -60px
+	#flecha-right
+		right -60px
+	.noticia-ver
+		background-image url("../img/noticia-ver.jpg")
+		background-position center center
+		background-repeat no-repeat
+		background-size cover
+		text-align center
+		padding 20px 40px
+		h3
+			font-family 'LubalinGraphStd'
+			font-style normal
+			font-weight 300
+			font-size 16px
+			color white
+			line-height 25px
+			margin-top 0px
+			height 60px
+			border-bottom 1px solid white
+			padding-bottom 10px
+			line-height 17px
+		p
+			font-family 'Lato'
+			font-style normal
+			font-weight 200
+			font-size 13px
+			color white
+			height 80px
+		a.leer-mas
+			font-family 'Myriad Pro'
+			font-style italic
+			font-weight 400
+			font-size 12px
+			color white
+			border 1px solid white
+			padding 8px 50px
+			&:hover
+				text-decoration none
+				background-color white
+				color black
+		&.blanco
+			background-color white
+			background-image none
+			h3
+				color #65696D
+			p
+				color #65696D
+			a.leer-mas
+				color #65696D
+				border 1px solid #65696D
+				&:hover
+					background-color black
+					color white
+@media (min-width: 767px) and (max-width: 970px)
+	#noticia-body
+		padding-left 35px
+		padding-right 35px
+		margin-left 0px
+		margin-right 0px
+@media (max-width: 767px)
+	#noticia-body
+		padding-left 35px
+		padding-right 35px
+		margin-left 0px
+		margin-right 0px
+		.noticia-ver
+			padding-left 30px
+			padding-right 30px
+		.flechas-noticia
+			font-size 55px
+			top 35%
+		#flecha-left
+			left 8px
+		#flecha-right
+			right 8px
+		.noticia-ver
+			p
+				height 100px
+#home-categoria
+	background-image url("../img/fondo-categoria.jpg")
+	background-position center center
+	background-repeat no-repeat
+	background-size cover
+	padding 40px 50px
+	margin-top 30px
+	h2
+		font-family 'LubalinGraphStd'
+		font-style normal
+		font-weight 300
+		font-size 35px
+		color white
+		width 800px
+		height 120px
+		margin-left auto
+		margin-right auto
+	p
+		font-family 'Lato'
+		font-style normal
+		font-weight 200
+		font-size 16px
+		color white
+		width 65%
+		margin-left auto
+		margin-right auto
+		margin-bottom 40px
+	a
+		font-family 'Lato'
+		font-style normal
+		font-weight 200
+		font-size 15px
+		color white
+		border 1px solid white
+		padding 10px 30px
+		display inline-block
+		margin-right 15px
+		margin-left 15px
+		text-decoration none
+		&:hover
+			color black
+			background-color white
+#contenido-categoria
+	.panel-categoria
+		background-color rgba(255, 255, 255, 0.07)
+		display inline-block
+		padding 7px
+		margin-top 50px
+		margin-bottom 50px
+		position relative
+	a#mas
+		background-color #006AA9
+		width 80px
+		height 80px
+		display table
+		text-align center
+		text-decoration none
+		position absolute
+		bottom -40px
+		left 0
+		right 0
+		margin-right auto
+		margin-left auto
+		i
+			color white
+			display table-cell
+			vertical-align middle
+			font-size 35px
+	.noticia-categoria
+		background-image url("../img/categoria-noticia.jpg")
+		background-position center center
+		background-repeat no-repeat
+		background-size cover
+		text-align center
+		padding 40px 50px
+		height 251px
+		cursor pointer
+		&:hover
+			h3
+				border-bottom 0
+			p
+				display none !important
+			span.fecha
+				display block
+			h4
+				display block
+		h3
+			font-family 'LubalinGraphStd'
+			font-style normal
+			font-weight 300
+			font-size 20px
+			color white
+			line-height 25px
+			margin-top 0px
+			height 60px
+			border-bottom 1px solid white
+			padding-bottom 10px
+			width 350px
+			margin-right auto
+			margin-left auto
+		p
+			font-family 'Lato'
+			font-style normal
+			font-weight 200
+			font-size 14px
+			color white
+			height 70px
+		h4
+			font-family 'Lato'
+			font-style normal
+			font-weight 200
+			font-size 18px
+			color white
+			display none
+		span.fecha
+			font-family 'Lato'
+			font-style normal
+			font-weight 200
+			font-size 17px
+			color white
+			display none
+			margin-bottom 16px
+		a.leer-mas
+			font-family 'Myriad Pro'
+			font-style italic
+			font-weight 400
+			font-size 12px
+			color white
+			border 1px solid white
+			padding 8px 50px
+			&:hover
+				text-decoration none
+				background-color white
+				color black
+		&.blanco
+			background-color white
+			background-image none
+			h3
+				color #65696D
+			p
+				color #65696D
+			a.leer-mas
+				color #65696D
+				border 1px solid #65696D
+				&:hover
+					background-color black
+					color white
+			span.fecha
+				color #80807F
+			h4
+				color #474644
+@media (max-width: 767px)
+	#home-categoria
+		padding-left 20px
+		padding-right 20px
+		h2
+			width 100%
+			font-size 30px
+		p
+			width 100%
+		a
+			padding-left 5px
+			padding-right 5px
+			margin-left 2px
+			margin-right 2px
+	#contenido-categoria
+		padding-left 0px
+		padding-right 0px
+		a#mas
+			height 50px
+			width 50px
+			bottom -25px
+			i
+				font-size 25px
+		.noticia-categoria
+			padding-left 20px 
+			padding-right 20px
+			h3
+				width 100%
+			p
+				height 80px

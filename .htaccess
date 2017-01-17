@@ -1,0 +1,27 @@
+# Activar RewriteEngine
+RewriteEngine On
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.karlmaslo.pe [NC]
+RewriteRule ^(.*)$ http://karlmaslo.pe/$1 [L,R=301]
+ 
+Rewriterule ^noticias/(.+)/?$ noticia.php?not_url=$1
+
+Rewriterule ^karl-maslo/?$ bibliografia.php?codigo=7
+
+Rewriterule ^categorias/(.+)/?$ categoria.php?cat_url=$1
+
+Rewriterule ^innovacion$ categoria.php?codigo=1
+
+Rewriterule ^industria-del-gas$ categoria.php?codigo=2
+
+Rewriterule ^seguridad$ categoria.php?codigo=5
+
+Rewriterule ^actualidad$ categoria.php?codigo=3
+
+Rewriterule ^servicio-a-la-mineria$ categoria.php?codigo=4
+
+
+
+
+

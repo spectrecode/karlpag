@@ -1,0 +1,134 @@
+
+<div class="inner-panel">
+  <div class="column">
+    <header id="menuLeft" ng-controller="menuPrincipalCrtl">
+      <div class="inner-logo"><img src="./resources/assets/image/logo.png" alt=""/></div>
+      <div class="inner-user"><img src="./resources/assets/image/usuario/{{photoUser}}" alt=""/></div>
+      <div class="detail-user">
+        <h2>{{nombreUser}}</h2>
+        <p>{{perfilUser}} </p>
+      </div>
+      <nav><a href="#/vista/principal">Inicio</a><a href="#/usuario">Usuarios</a><a href="#/noticia" class="active">Noticias</a><a href="#/bibliografia">Biografía</a></nav>
+    </header>
+  </div>
+  <div class="column">
+    <div ng-controller="miusuarioCrtl" class="cabecera">
+      <div class="column">
+        <p><i class="icon-calendar"></i>Lunes 14 de Noviembre del 2017</p>
+      </div>
+      <div class="column"><a href="javascript:void(0)" ng-click="editarmiUser()">Editar usuario</a><a href="#" ng-click="salirAdmin()">Salir</a></div>
+    </div>
+    <div ng-controller="editarNoticiaCrtl" class="inner-contenido">
+      <div class="inner-nave">
+        <ul>
+          <li><a href="#/noticia/">Noticia</a><span class="dividir">>></span></li>
+          <li><a href="javascript:void(0)" class="active">{{nom_accion}}</a></li>
+        </ul>
+      </div>
+      <div class="inner-botones">
+        <div class="column"></div>
+        <div class="column"><a href="javascript:void(0)" ng-click="procesarForm(form)" class="btnaddArt"><i class="icon-plus"></i>Guardar cambios</a></div>
+      </div>
+      <div class="inner-form form-interno">
+        <form name="form">
+          <fieldset class="row inner-alert">
+            <div class="alert exito">
+              <p></p>
+            </div>
+          </fieldset>
+          <fieldset class="row">
+            <label>Categoría</label>
+            <div class="inner-select">
+              <div id="categoria" class="cajaselect"><span class="seleccionado">Categoría</span>
+                <ul class="listaselect">
+                  <li><a href="javascript:void(0)" data-id="0">Categoría</a></li>
+                  <li ng-repeat="lcat in listcat" class="{{lcat.clase}}"><a href="javascript:void(0)" data-id="{{lcat.id}}">{{lcat.nombre}}</a></li>
+                </ul><span class="trianguloinf"></span>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="row">
+            <label>Título (máxmio de caracteres 65)</label>
+            <input type="text" name="titulo" id="titulo" ng-model="form.titulo" placeholder="Ingrese el Título"/>
+          </fieldset>
+          <fieldset class="row">
+            <label>
+               
+              Url Amigable <span>(Es para mejor el tema de SEO ej. http://karlmaslo.pe/minoticia) </span>
+            </label>
+            <input type="text" name="url_seo" id="url_seo" ng-model="form.url_seo" placeholder="Escriba la URL Amigable"/>
+          </fieldset>
+          <fieldset class="row">
+            <label>Frase</label>
+            <textarea name="frase" ckeditor="editorOptions" id="frase" ng-model="form.frase" placeholder="Ingrese la Frase"></textarea>
+          </fieldset>
+          <fieldset class="row">
+            <label>Fecha de Publicación</label>
+            <input type="text" name="f_publicacion" id="f_publicacion" ng-model="form.f_publicacion" placeholder="Ingrese la Fecha de Publicación"/>
+          </fieldset>
+          <!--fieldset.row
+          label 
+          	| Order que aparecen las noticias, son números enteros 
+          	span
+          		| (Ej. 1, 2, 3... etc - de menor a mayor)
+          input(type="text", name="order", id="order", ng-model="form.order", placeholder="Order que aparecen las noticias")
+          -->
+          <fieldset class="row">
+            <label>Ingrese la Descripción Corta (máxmio de caracteres 160)</label>
+            <textarea name="descrip_superior" ckeditor="editorOptions" id="descrip_superior" ng-model="form.descrip_superior" placeholder="Ingrese la Descripción Corta"></textarea>
+          </fieldset>
+          <fieldset class="row">
+            <label>Ingrese la Descripción</label>
+            <textarea name="descrip_inferior" id="descrip_inferior" ckeditor="editorOptions" ng-model="form.descrip_inferior" placeholder="Ingrese la Descripción" class="neditor"></textarea>
+          </fieldset>
+          <fieldset class="row">
+            <label>Suba la imagén de Portada</label>
+            <figure><img src="{{rutaImg}}{{form.act_img_portada}}"/></figure>
+            <input type="file" name="file_portada" id="file_portada" ng-model="form.file_portada"/>
+          </fieldset>
+          <fieldset class="row">
+            <label>Tipo de Multimedia</label>
+            <div class="inner-select">
+              <div id="tipomultimedia" class="cajaselect"><span class="seleccionado">Tipo de Multimedia</span>
+                <ul class="listaselect">
+                  <li><a href="javascript:void(0)" data-id="0">Tipo de Multimedia</a></li>
+                  <li><a href="javascript:void(0)" data-id="1">Imágen</a></li>
+                  <li><a href="javascript:void(0)" data-id="2">Video (Youtube)</a></li>
+                </ul><span class="trianguloinf"></span>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset id="multimedia-1" class="row multimedia">
+            <label>Subir imagén Interna</label>
+            <figure><img src="{{rutaImg}}{{form.act_mul_imagen}}"/></figure>
+            <input type="file" name="mul_fileImagen" id="mul_fileImagen" ng-model="form.mul_fileImagen"/>
+          </fieldset>
+          <fieldset id="multimedia-2" class="row multimedia">
+            <label>
+               
+              Coloque el código de Youtube, <span>ej: F0ApAtX9AP8</span>
+            </label>
+            <input type="text" name="mul_video" id="mul_video" ng-model="form.mul_video" placeholder="Ingrese el código de Youtube"/>
+          </fieldset>
+          <fieldset class="row">
+            <label>¿Popular? </label>
+            <input type="checkbox" ng-model="checkboxDestacado.value1"/>
+          </fieldset>
+          <fieldset class="row">
+            <label>¿Publicado?</label>
+            <input type="checkbox" ng-model="checkboxModel.value1"/>
+          </fieldset>
+          <fieldset class="row inner-alert">
+            <div class="alert exito">
+              <p></p>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="inner-botones">
+        <div class="column"></div>
+        <div class="column"><a href="javascript:void(0)" ng-click="procesarForm(form)" class="btnaddArt"><i class="icon-plus"></i>Guardar cambios</a></div>
+      </div>
+    </div>
+  </div>
+</div>

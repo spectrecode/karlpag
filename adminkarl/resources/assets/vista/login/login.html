@@ -1,0 +1,48 @@
+
+<div class="inner-login">
+  <div class="formLogin">
+    <div class="inner-form">
+      <figure><img src="./resources/assets/image/logo.png" alt="Red Prolid"/></figure>
+      <legend>
+        <h1>Bienvenida a Karl Maslo</h1>
+        <h2>Por favor ingrese sus Credenciales</h2>
+      </legend>
+      <form id="login">
+        <fieldset class="row inner-alert">
+          <div class="alert exito">
+            <p><strong>{{msnjlogin}}</strong></p>
+          </div>
+        </fieldset>
+        <legend>
+          <h2>Login</h2>
+        </legend>
+        <fieldset class="row">
+          <input type="text" name="usuario" id="usuario" ng-model="form.usuario" placeholder="Usuario"/>
+        </fieldset>
+        <fieldset class="row">
+          <input type="password" name="password" id="password" ng-model="form.password" placeholder="Contraseña"/>
+        </fieldset>
+        <fieldest class="row"><img src="{{captcha}}" alt="Captcha Karl"/></fieldest>
+        <fieldset class="row">
+          <input type="text" name="captcha" id="captcha" ng-model="form.captcha" placeholder="Ingrese el Captcha"/>
+        </fieldset>
+        <!--fieldset.rowdiv(class="g-recaptcha" data-sitekey="6Lc_Vg4UAAAAAFaRnhgoCz1f2clvqonk9kMeDLHH")
+        -->
+        <fieldset class="row">
+          <div class="inner-flex">
+            <div class="inner-link">
+              <!--a(href="javascript:void(0)")| Nuevo usuario
+              --><a href="javascript:void(0)">¿Olvidaste tu contraseña?</a>
+            </div>
+            <button ng-click="enviarDatos(form)">INGRESAR</button>
+          </div>
+        </fieldset>
+      </form>
+      <fieldset class="link"><a href="javascript:void(0)">Nuevo usuario</a><a href="javascript:void(0)">¿Olvidaste tu contraseña?</a></fieldset>
+    </div>
+  </div>
+</div>
+<footer>
+  <p>© 2010-2016 All Rights Reserved</p>
+  <p>powerd by <a href="http://www.mediaimpact.pe" target="_blanck">media impact</a></p>
+</footer>
