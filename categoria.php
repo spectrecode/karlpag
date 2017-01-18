@@ -88,7 +88,7 @@ for($i=0;$i<=$item;$i++){
 <!DOCTYPE html>
 <html lang="es" ng-app="karlMaslo">
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Karl Maslo | <?php echo $categoria; ?></title>
@@ -110,8 +110,8 @@ for($i=0;$i<=$item;$i++){
     </style>
 </head>
 <body>
-	
-	<?php include('header.php'); ?>
+    
+    <?php include('header.php'); ?>
     <?php
         if ($boolnot == true){
     ?>
@@ -132,24 +132,26 @@ for($i=0;$i<=$item;$i++){
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 col-sm-12 col-xs-12">
                     <div class="row">
-                        <div class="panel-categoria" ng-controller="categoriaNotCrtl">
+<!-- <div class="panel-categoria" ng-controller="categoriaNotCrtl"> -->
+                        <div class="panel-categoria">
                             <?php echo $html_not; ?>
-
                             <div style="border:1px solid #000">
-                                <div class="col-lg-6 col-sm-6 col-xs-12" ng-repeat="post in datos">
+         <!-- <div class="col-lg-6 col-sm-6 col-xs-12" ng-repeat="post in datos"> -->
+                                <div class="col-lg-6 col-sm-6 col-xs-12">
                                     <div class="row">
                                         <div class="noticia-categoria {{post.classrow}}" style="{{post.backgroundimage}}">
                                             <div class="sombra" style="width:100%;height:100%;background-color:rgba(0,25,45,0.8);top:0;left:0;position:absolute;"></div>
-                                            <div style="position:relative;">
+                                            <!-- <div style="position:relative;">
                                                 <h4><i class="fa fa-caret-left" aria-hidden="true"></i>{{post.namecategoria}}<i class="fa fa-caret-right" aria-hidden="true"></i></h4>
                                                 <h3>{{post.titulo}}</h3>
                                                 <div ng-bind-html="post.descripsuperior"></div>
                                                 <span class="fecha">{{post.for_f_publica}}</span>
                                                 <a href="noticias/{{post.nameurl_seo}}" class="leer-mas">Leer más <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
                             <a href="javascript:void(0)" <?php echo $stylemas; ?> ng-click="paginarPost(<?php echo $codcat?>)" id="mas"><i class="fa fa-plus" aria-hidden="true"></i></a>
                         </div>
